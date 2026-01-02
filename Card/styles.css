@@ -1,0 +1,21 @@
+
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+.shadow-class{
+    box-shadow: 8px 8px 20px 0px rgba(85, 85, 85, 0.08);
+}
+
+.violet-color{
+    color:#7c19ee
+}
+
+.aspect-ratio{
+    aspect-ratio: 336/152;
+}
+
+
+
