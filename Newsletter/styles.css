@@ -1,0 +1,50 @@
+:root {
+    --grey:#6C727F;
+    --light-grey:#E5E7EB;
+    --light-white:#F9FAFB;
+    --white:#FFFFFF;
+    --black:#000000;
+    --blue: #284BCE;
+    --dark-grey:#394150;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.btn-blue {
+  background: var(--blue);
+}
+
+.light-gray{
+    background-color: var(--light-grey);
+}
+
+h1{
+    font-size: 48px;;
+}
+
+form input{
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+form button{
+    font-weight:600;
+    font-size: 1rem;;
+}
+
+p{
+    font-size:20px;
+}
+
+form p{
+    font-weight: 400;
+    font-size: 14px;;
+}
+
+
+
+
+
