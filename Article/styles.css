@@ -1,0 +1,25 @@
+:root{
+    --black:#000000;
+    --grey:#4D5562;
+    --cream:#D9D9D9;
+    --white:#F8FAFC;
+}
+
+*{
+    margin:0;
+    padding:0;
+    color: var(--white);
+    box-sizing: border-box;
+}
+
+
+.heading{
+    color:var(--black);
+}
+
+.sub-heading{
+    color: var(--grey);
+}
+
+
+
