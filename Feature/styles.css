@@ -1,0 +1,50 @@
+:root{
+    --color-darkblack:#121826;
+    --color-lightblack:#212936;
+    --color-darkgrey:#9DA3AE;
+    --color-offwhite:#E5E7EB;
+    --color-lightblue:#DEE9FC;
+    --color-peach:#FBE5E6;
+    --color-yellow:#FCEED8;
+    --color-lightgrey:#D2D5DA;
+     --default-font-family: "Outfit", sans-serif;
+}
+
+body{
+    background: url(assets/Background_image@3x.png);    
+    background-color:var(--color-darkblack);
+    color:var(--color-offwhite);
+    font-family: var(--default-font-family);
+}
+
+.sub-heading-color{
+    color: var(--color-darkgrey);
+}
+
+.bg-peach{
+    background-color: var(--color-peach);
+}
+
+.bg-yellow{
+    background-color: var(--color-yellow);
+}
+
+.bg-lightblue{
+    background-color: var(--color-lightblue);
+}
+
+.icons{
+     width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+    
+}
+
+.feature-card{
+    max-width:300px;
+    min-height:450px;
+    background-color: var(--color-lightblack);
+}
+
