@@ -1,0 +1,37 @@
+:root{
+    --color-cream:#F2F5F9;
+    --color-white:#FFFFFF;
+    --color-black:#111729;
+    --color-grey:#4A5567;
+}
+
+body{
+    color: var(--color-cream);
+}
+
+.text-color{
+    color: var(--color-black);
+}
+
+.text-grey{
+    color: var(--color-grey);
+}
+
+.card{
+    background-color:var(--color-white);
+    box-shadow: 0px 10px 15px 0px;
+    max-width: 410px;
+    width:100%;
+}
+
+.image-border{
+    border-color: var(--color-grey);
+    border: 2px solid;
+}
+
+.curve-wave{
+    position:relative;
+    top:-4rem;
+    left:0;
+    bottom:0;
+}
