@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -6,8 +7,25 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-yellow-50: #F8D8B0;
+    --color-teal-50: #86E7D4;
+    --color-blue-50: #9DC4F8;
+    --color-blue-500: #263FA9;
+    --color-purple-50: #C1B6F8;
+    --color-pink-50: #EDACD2;
+    --color-black: #000000;
+    --color-white: #FFFEFE;
+    --spacing: 0.25rem;
+    --container-6xl: 72rem;
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --font-weight-semibold: 600;
+    --radius-3xl: 1.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-grey-50: #F3F4F6;
+    --color-grey-100: #394150;
+    --font-outfit: 'Outfit',sans-serif;
   }
 }
 @layer base {
@@ -161,5 +179,151 @@
 @layer utilities {
   .static {
     position: static;
+  }
+  .m-4 {
+    margin: calc(var(--spacing) * 4);
+  }
+  .flex {
+    display: flex;
+  }
+  .max-w-6xl {
+    max-width: var(--container-6xl);
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .items-end {
+    align-items: flex-end;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
+  .bg-blue-50 {
+    background-color: var(--color-blue-50);
+  }
+  .bg-pink-50 {
+    background-color: var(--color-pink-50);
+  }
+  .bg-purple-50 {
+    background-color: var(--color-purple-50);
+  }
+  .bg-teal-50 {
+    background-color: var(--color-teal-50);
+  }
+  .bg-yellow-50 {
+    background-color: var(--color-yellow-50);
+  }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .text-black {
+    color: var(--color-black);
+  }
+  .text-blue-500 {
+    color: var(--color-blue-500);
+  }
+  .text-grey-100 {
+    color: var(--color-grey-100);
+  }
+  .md\:grid {
+    @media (width >= 48rem) {
+      display: grid;
+    }
+  }
+  .md\:grid-rows-3 {
+    @media (width >= 48rem) {
+      grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .md\:place-content-center {
+    @media (width >= 48rem) {
+      place-content: center;
+    }
+  }
+  .lg\:col-span-2 {
+    @media (width >= 64rem) {
+      grid-column: span 2 / span 2;
+    }
+  }
+  .lg\:col-span-4 {
+    @media (width >= 64rem) {
+      grid-column: span 4 / span 4;
+    }
+  }
+  .lg\:grid {
+    @media (width >= 64rem) {
+      display: grid;
+    }
+  }
+  .lg\:grid-cols-4 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .lg\:grid-rows-2 {
+    @media (width >= 64rem) {
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("src/fonts/Outfit/static/Outfit-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("src/fonts/Outfit/static/Outfit-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("src/fonts/Outfit/static/Outfit-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@layer base {
+  html {
+    font-family: var(--font-outfit);
+  }
+  body {
+    background-color: var(--color-white);
+  }
+  main {
+    background-color: var(--color-grey-50);
+  }
+}
+.image-container {
+  position: relative;
+}
+.image-text {
+  position: absolute;
+  color: var(--color-white);
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-font-weight: initial;
+    }
   }
 }
