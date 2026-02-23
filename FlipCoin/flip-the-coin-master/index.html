@@ -1,8 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       rel="icon"
@@ -12,47 +19,44 @@
     />
 
     <title>Flip the coin | devChallenges.io</title>
-
-    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        height: 100vh;
-      }
-
-      .author-info {
-        font-size: 14px;
-        text-align: center;
-        margin-top: 16px;
-        color: rgb(55, 65, 81);
-      }
-
-      .author-info a {
-        text-decoration: none;
-      }
-    </style>
   </head>
   <body>
-    <!-- 
-
-    Flip a Coin Game
-    Press the coin or the button to flip the coin
-    Head
-    Tail
-    Random
-  
-    -->
+    <main>
+      <section class="flex flex-col justify-center items-center gap-4 pt-16">
+        <h1 class="text-3xl md:text-5xl">Flip The Coin</h1>
+        <p class="text-sm md:text-3xl">Press the coin or the button to flip the coin</p>
+        <div class="flex flex-col gap-8">
+          <img id="img-coin" class="cursor-pointer" src="resources/heads.svg" alt="coin head" />
+          <img src="resources/shadow.svg" alt="shadow image" />
+        </div>
+        <p id="coin-side"></p>
+        <button type="button" class="rounded-lg w-32 h-12" id="flip-button">
+          Random
+        </button>
+      </section>
+    </main>
 
     <div class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
+      Coded by <a href="#">Hemadri Khandelwal</a> | Challenge by
       <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
         >devChallenges.io</a
       >.
     </div>
+
+    <script>
+      const btn = document.querySelector("#flip-button");
+      const p = document.querySelector("#coin-side");
+      const img = document.querySelector("#img-coin");
+
+      function flipCoin() {
+        const result = Math.random() < 0.5 ? "Heads" : "Tails";
+
+        p.innerText = result;
+        img.src = `resources/${result.toLowerCase()}.svg`;
+      }
+
+      btn.addEventListener("click", flipCoin);
+      img.addEventListener("click", flipCoin);
+    </script>
   </body>
 </html>
